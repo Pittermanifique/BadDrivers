@@ -1,0 +1,235 @@
+body {
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgb(18, 18, 18);
+    color: antiquewhite;
+    margin: 0;
+    appearance: none;
+}
+
+.titre {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.plaque {
+    width: 70%;
+    display: flex;
+    gap: 35px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 2px solid antiquewhite;
+    border-radius: 12px;
+}
+
+.ex {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.lien {
+    color: antiquewhite;
+    display: flex;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    text-align: center;
+    appearance: none;
+    text-decoration: none;
+    border-radius: 8px;
+    background: #222;
+    padding: 12px 28px;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.box label {
+    border-radius: 8px;
+    background: #222;
+    color: antiquewhite;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding: 12px 28px;
+    cursor: pointer;
+    gap: 8px;
+}
+
+.signal{
+    margin-top: 70px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    border: 2px solid antiquewhite;
+    border-radius: 12px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.note-checkbox {
+    margin: 0%;
+    margin-right: 10px;
+    color: #27208a00;
+}
+
+.comment {
+    height: 70px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.report {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.report button {
+    padding: 12px 28px;
+    background: #333;
+    color: antiquewhite;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+
+.input-style {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #333;
+    color: antiquewhite;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    transition: background 0.2s;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.input-style-comment {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #333;
+    color: antiquewhite;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    transition: background 0.2s;
+    margin-bottom: 10px;
+}
+
+
+button {
+    appearance: none;
+}
+
+.photo {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #333;
+    color: antiquewhite;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-bottom: 10px;
+}
+
+
+.podium {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 30px;
+}
+
+.clasement {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.place1 {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(188, 163, 25);
+    height: 150px;
+    width: 100px;
+    margin: 0;
+}
+
+
+.place2 {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(110, 108, 110);
+    height: 100px;
+    width: 100px;
+    margin: 0;
+}
+
+.place3 {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(113, 86, 5);
+    height: 50px;
+    width: 100px;
+    margin: 0;
+}
+
+.place1 h1 {
+    margin: 0;
+}
+
+
+.place2 h1 {
+    margin: 0;
+}
+
+.place3 h1 {
+    margin: 0;
+}
+
+.podium-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

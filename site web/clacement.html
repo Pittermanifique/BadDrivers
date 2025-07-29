@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Classement BadDrivers</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="request.js" defer></script>
+</head>
+<body>
+    <div class="titre"><h1>Classement des pire conducteurs par plaque</h1></div>
+    <div class="ex"><p>le top 30 des pires conducteurs<br>⬇️</p></div>
+    <div class="podium">
+        <div class="podium-container">
+            <div id="podium-2"></div>
+            <div class="place2">
+                <h1>2</h1>
+            </div>
+        </div>
+        <div class="podium-container">
+            <div id="podium-1"></div>
+            <div class="place1">
+                <h1>1</h1>
+            </div>
+        </div>
+        <div class="podium-container">
+            <div id="podium-3"></div>
+            <div class="place3">
+                <h1>3</h1>
+            </div>
+        </div>
+    </div>
+    <div class="clasement" id="classement-container"></div>
+    <script>
+        window.onload = function() {
+            getClassement(30);
+        };
+    </script>
+</body>
+</html>

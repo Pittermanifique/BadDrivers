@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="request.js"></script>
+    <title>BadDrivers</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="titre">
+        <h1>Rapporter un mauvais conducteur</h1>
+        <p>Remplis ce formulaire pour signaler un mauvais conducteur</p>
+    </div>
+    <a class="lien" href="clacement.html"> lien vers le clasement des pires conducteurs</a>
+    <div class="plaque">
+        <div>
+            <label class="photo">Choisir une photo<input type="file" style="display:none;"></label>
+        </div>
+        <div>
+            <p>Entrez la plaque du conducteur soit avec une photo ⬆️ <br> soit à la main ⬇️</p>
+        </div>
+        <div class="main"><input class="input-style" type="text" placeholder="Plaque (AA-000-AA)"></div>
+    </div>
+    <div class="signal">
+        <div class="ex">
+            <p>Choisissez la ou les raisons de ce signalement<br>⬇️</p>
+        </div>
+        <div class="box">
+            <label><input type="checkbox" class="note-checkbox" value="100">Conduite à contresens</label>
+            <label><input type="checkbox" class="note-checkbox" value="95">Refus de priorité à un piéton engagé</label>
+            <label><input type="checkbox" class="note-checkbox" value="93">Non-respect d`un feu rouge</label>
+            <label><input type="checkbox" class="note-checkbox" value="92">Dépassement dangereux (virage, ligne continue)</label>
+            <label><input type="checkbox" class="note-checkbox" value="90">Circulation sur bande d`arrêt d`urgence</label>
+            <label><input type="checkbox" class="note-checkbox" value="88">Non-port de la ceinture de sécurité</label>
+            <label><input type="checkbox" class="note-checkbox" value="85">Téléphone tenu en main en conduisant</label>
+            <label><input type="checkbox" class="note-checkbox" value="83">Excès de vitesse manifeste (ex. : en ville à +70 km/h)</label>
+            <label><input type="checkbox" class="note-checkbox" value="82">Non-respect d`un stop</label>
+            <label><input type="checkbox" class="note-checkbox" value="80">Franchissement de ligne continue</label>
+            <label><input type="checkbox" class="note-checkbox" value="78">Non-respect des distances de sécurité</label>
+            <label><input type="checkbox" class="note-checkbox" value="75">Changement de voie sans clignotant</label>
+            <label><input type="checkbox" class="note-checkbox" value="72">Stationnement sur passage piéton</label>
+            <label><input type="checkbox" class="note-checkbox" value="70">Circulation sur voie de bus</label>
+            <label><input type="checkbox" class="note-checkbox" value="68">Non-respect des priorités à un rond-point</label>
+            <label><input type="checkbox" class="note-checkbox" value="65">Conduite avec phares éteints de nuit</label>
+            <label><input type="checkbox" class="note-checkbox" value="63">Véhicule avec pneus visiblement lisses</label>
+            <label><input type="checkbox" class="note-checkbox" value="60">Conduite avec un pare-brise obstrué (givre, buée)</label>
+            <label><input type="checkbox" class="note-checkbox" value="58">Stationnement en double file</label>
+            <label><input type="checkbox" class="note-checkbox" value="55">Arrêt sur une voie de circulation sans urgence</label>
+            <label><input type="checkbox" class="note-checkbox" value="52">Non-respect des clignotants en tournant</label>
+            <label><input type="checkbox" class="note-checkbox" value="50">Conduite avec un chargement mal arrimé</label>
+            <label><input type="checkbox" class="note-checkbox" value="45">Usage abusif du klaxon</label>
+            <label><input type="checkbox" class="note-checkbox" value="42">Conduite avec un feu grillé à faible allure</label>
+            <label><input type="checkbox" class="note-checkbox" value="40">Manger ou boire au volant (sans perte de contrôle)</label>
+            <label><input type="checkbox" class="note-checkbox" value="35">Absence de plaque visible ou lisible</label>
+            <label><input type="checkbox" class="note-checkbox" value="30">Défaut d`éclairage de plaque</label>
+            <label><input type="checkbox" class="note-checkbox" value="28">Stationnement au-delà du temps autorisé (zone bleue)</label>
+            <label><input type="checkbox" class="note-checkbox" value="25">Absence de vignette d`assurance visible</label>
+            <label><input type="checkbox" class="note-checkbox" value="20">Fumer en présence d`un mineur dans le véhicule</label>
+            <label><input type="checkbox" class="note-checkbox" value="15">Conduite avec musique excessivement forte</label>
+            <label><input type="checkbox" class="note-checkbox" value="10">Conduite avec un bras ou la tête hors du véhicule</label>
+            <label><input type="checkbox" class="note-checkbox" value="5">Stationnement gênant mais sans danger</label>
+            <label><input type="checkbox" class="note-checkbox" value="50">Autre (précisez dans le commentaire)</label>
+
+            <label><input type="checkbox" class="note-checkbox" value="95">Hurler ou insulter un autre conducteur (fenêtre ouverte)</label>
+            <label><input type="checkbox" class="note-checkbox" value="92">Klaxon prolongé ou agressif sans raison valable</label>
+            <label><input type="checkbox" class="note-checkbox" value="90">Geste obscène ou menaçant (doigt d`honneur, bras d`honneur)</label>
+            <label><input type="checkbox" class="note-checkbox" value="88">Descendre de son véhicule pour s`expliquer violemment</label>
+            <label><input type="checkbox" class="note-checkbox" value="85">Coller volontairement un autre véhicule (intimidation)</label>
+            <label><input type="checkbox" class="note-checkbox" value="83">Faire une queue de poisson délibérée</label>
+            <label><input type="checkbox" class="note-checkbox" value="78">Klaxonner dès que le feu passe au vert</label>
+            <label><input type="checkbox" class="note-checkbox" value="75">Crier ou râler bruyamment (fenêtres ouvertes)</label>
+            <label><input type="checkbox" class="note-checkbox" value="72">Regarder fixement ou provoquer un autre conducteur</label>
+            <label><input type="checkbox" class="note-checkbox" value="70">Doubler puis freiner brusquement devant un autre véhicule</label>
+            <label><input type="checkbox" class="note-checkbox" value="65">Accélérer pour empêcher une insertion</label>
+            <label><input type="checkbox" class="note-checkbox" value="55">Parler fort ou gesticuler au volant (visiblement énervé)</label>
+            <label><input type="checkbox" class="note-checkbox" value="50">Refuser de laisser passer un piéton par pure impatience</label>
+            <label><input type="checkbox" class="note-checkbox" value="35">Fumer avec la fenêtre ouverte à côté d`un cycliste/piéton</label>
+            <label><input type="checkbox" class="note-checkbox" value="30">Manger bruyamment ou jeter des déchets par la fenêtre</label>
+            <label><input type="checkbox" class="note-checkbox" value="28">Conduire avec un animal qui aboie ou saute dans l`habitacle</label>
+            <label><input type="checkbox" class="note-checkbox" value="25">Se maquiller ou se raser au feu rouge</label>
+            <label><input type="checkbox" class="note-checkbox" value="70">Faire des appels de phares inutiles</label>
+        </div>
+        <div class="ex">
+            <p>un commentaire ???<br>⬇️</p>
+        </div>
+        <div class="comment"><textarea class="input-style-comment" placeholder="Commentaire" rows="5" style="width:100%;resize:vertical;"></textarea></div>
+    </div>
+    <div class="report"><button onclick="envoyerRapport()">Envoyer</button></div>
+</body>
+
+</html>
