@@ -6,3 +6,5 @@ starlette
 matplotlib
 easyocr
 opencv-python
+pillow
+numpy
