@@ -26,7 +26,7 @@ async function envoyerRapport() {
     }
 
     try {
-        const response = await fetch('http://127.0.0.1:8000/report/', {
+        const response = await fetch('https://baddrivers.onrender.com/report/', {
             method: 'POST',
             body: formData
         });
@@ -46,7 +46,7 @@ async function envoyerRapport() {
 
 async function getClassement(top = 10) {
     try {
-        const response = await fetch(`http://127.0.0.1:8000/clasement/?top=${top}`);
+        const response = await fetch(`https://baddrivers.onrender.com/clasement/?top=${top}`);
         const data = await response.json();
 
         // Remplir le podium
