@@ -3,5 +3,6 @@ gunicorn
 fastapi
 python-multipart
 starlette
+matplotlib
 easyocr
 opencv-python
