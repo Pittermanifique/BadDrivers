@@ -11,24 +11,27 @@ import re
 
 app = FastAPI(title="report plaque")
 
+# ✅ CORS CORRIGÉ : enlever le slash à la fin
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://pittermanifique.github.io/"],
+    allow_origins=["https://pittermanifique.github.io"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
+# ✅ Validation du format de plaque
 async def verifier_format(chaine):
     motif = r'^[A-Z]{2}-\d{3}-[A-Z]{2}$'
     return re.match(motif, chaine) is not None
 
-@app.get("/clasement/",summary="Clasement")
+# ✅ Route pour le classement
+@app.get("/clasement/", summary="Classement")
 async def clasement(top: int = Query(10, ge=1, description="Nombre de plaques à retourner")):
     result = bdd.classement(top)
     return result
 
-
+# ✅ Route pour le signalement
 @app.post("/report/", summary="Analyse d'une plaque depuis une image ou un texte")
 async def analyse(
     file: Optional[UploadFile] = File(None),
@@ -36,12 +39,12 @@ async def analyse(
     commentaire: Optional[str] = Form(None),
     plaque: Optional[str] = Form(None),
 ):
+    verif = await verifier_format(plaque) if plaque else False
 
-    verif =  await verifier_format(plaque)
+    if not file and not plaque:
+        raise HTTPException(status_code=400, detail="Veuillez fournir une image ou un texte.")
+
     if verif:
-        if not file and not plaque:
-            raise HTTPException(status_code=400, detail="Veuillez fournir une image ou un texte.")
-
         if file:
             if not file.content_type.startswith("image/"):
                 raise HTTPException(status_code=400, detail="Ce fichier n'est pas une image.")
@@ -62,24 +65,16 @@ async def analyse(
             if not success:
                 raise HTTPException(status_code=404, detail="Aucune plaque détectée.")
 
-            # Enregistrement en basesss
             bdd.report(success[1][0], note, commentaire)
 
-            return JSONResponse(content={
-                "status": "ok",
-            })
-
+            return JSONResponse(content={"status": "ok"})
         else:
-            # Traitement du texte directement soumis
             bdd.report(plaque, note, commentaire)
-
-            return JSONResponse(content={
-                "status": "ok",
-            })
+            return JSONResponse(content={"status": "ok"})
     else:
-        return JSONResponse(content={
-                "status": "none",
-            })
+        return JSONResponse(content={"status": "none"})
 
-
-
+# ✅ Code nécessaire pour Render (ou autre plateforme cloud)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 4000))  # Render utilise une variable PORT
+    uvicorn.run("api:app", host="0.0.0.0", port=port)
