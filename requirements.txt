@@ -3,4 +3,5 @@ gunicorn
 fastapi
 python-multipart
 starlette
+easyocr
 opencv-python
